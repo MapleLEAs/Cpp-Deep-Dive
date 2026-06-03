@@ -1,4 +1,5 @@
 # Cpp-Deep-Dive
+<<<<<<< HEAD
 C++底层原理实战项目，手动复刻STL核心组件，探究C++内存与对象模型。
 
 ## 项目模块
@@ -8,3 +9,6 @@ C++底层原理实战项目，手动复刻STL核心组件，探究C++内存与�
 
 ## 编译方式
 CMake + C++17
+=======
+Hand-written C++ underlying source code: smart pointer, memory pool, virtual table &amp; template metaprogramming practice to explore C++ memory model.
+>>>>>>> 3b3c1cd7971f51e412879b58fcb9e2f65873a6d8
