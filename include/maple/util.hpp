@@ -1,6 +1,8 @@
-#ifndef MYSTL_UTIL_HPP
-#define MYSTL_UTIL_HPP
-namespace mystl{
+#ifndef MAPLE_UTIL_HPP
+#define MAPLE_UTIL_HPP
+#include "maple/type_traits.hpp"
+
+namespace maple{
 	template<typename T1,typename T2>
 	struct pair{
 		T1 first;
@@ -26,8 +28,8 @@ namespace mystl{
 		
 //		//swap
 //		void swap(pair& other){
-//			mystl::swap(first,other.first);
-//			mystl::swap(second,other.second);
+//			maple::swap(first,other.first);
+//			maple::swap(second,other.second);
 //		}
 	};
 	
@@ -81,11 +83,7 @@ namespace mystl{
 	    return static_cast<T&&>(arg);
 	}
 	
-	template <typename T>
-	T&& forward(typename remove_reference<T>::type&& arg) {
-	    return static_cast<T&&>(arg);
-	}
-}// namespace mystl
+}// namespace maple
 
 
 #endif
