@@ -92,6 +92,10 @@ namespace maple{
 	// 基本类型 = 平凡析构
 	template <typename T>
 	struct is_trivially_destructible : is_arithmetic<T> {};
+	
+	// 指针也是平凡析构
+	template <typename T>
+	struct is_trivially_destructible<T*> : true_type {};
 }//namespace maple
 
 #endif

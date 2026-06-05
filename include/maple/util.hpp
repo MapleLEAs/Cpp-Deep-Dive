@@ -26,11 +26,12 @@ namespace maple{
 		//移动赋值 
 		pair&operator=(pair&&)=default; 
 		
-//		//swap
-//		void swap(pair& other){
-//			maple::swap(first,other.first);
-//			maple::swap(second,other.second);
-//		}
+		//swap
+		void swap(pair& other) {
+		    using std::swap;
+		    swap(first, other.first);
+		    swap(second, other.second);
+		}
 	};
 	
 	//pair 比较符
@@ -81,6 +82,14 @@ namespace maple{
 	template <typename T>
 	T&& forward(typename remove_reference<T>::type& arg) {
 	    return static_cast<T&&>(arg);
+	}
+	
+	// swap
+	template <typename T>
+	void swap(T& a, T& b) {
+	    T tmp = maple::move(a);
+	    a = maple::move(b);
+	    b = maple::move(tmp);
 	}
 	
 }// namespace maple

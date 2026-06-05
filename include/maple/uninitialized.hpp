@@ -17,7 +17,7 @@ namespace maple{
 		    ForwardIterator cur = result;
 		    try {
 		        for (; first != last; ++first, ++cur) {
-		            construct(&(*cur), *first);
+		            maple::construct(&(*cur), *first);
 		        }
 		    } catch (...) {
 		        destroy(result, cur);
@@ -31,7 +31,7 @@ namespace maple{
 		    ForwardIterator cur = first;
 		    try {
 		        for (; cur != last; ++cur) {
-		            construct(&(*cur), value);
+		            maple::construct(&(*cur), value);
 		        }
 		    } catch (...) {
 		        destroy(first, cur);
