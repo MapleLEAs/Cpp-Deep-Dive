@@ -88,6 +88,10 @@ namespace maple{
 	
 	//// 13. is_void
 	template <typename T> struct is_void : is_same<void, typename remove_const<T>::type> {};
+	
+	// 基本类型 = 平凡析构
+	template <typename T>
+	struct is_trivially_destructible : is_arithmetic<T> {};
 }//namespace maple
 
 #endif
