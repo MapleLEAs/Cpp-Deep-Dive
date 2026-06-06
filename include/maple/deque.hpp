@@ -130,6 +130,7 @@ namespace maple{
 			using value_type=T;
 			using iterator=deque_iterator<T>;
 			using reference=T&;
+			using const_reference = const T&;
 			using size_type=size_t;
 			
 			deque()
@@ -160,9 +161,11 @@ namespace maple{
 			reference front(){
 				return *start_;
 			}
+			const_reference front() const { return *start_; }
 			reference back(){
 				return *(finish_-1);
 			}
+			const_reference back()  const { return *(finish_ - 1); }
 			
 			reference operator[](size_t n){
 				return start_[n];
